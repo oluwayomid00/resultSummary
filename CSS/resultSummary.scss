@@ -1,0 +1,183 @@
+body{
+    margin: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    p{
+        font-size: 0.85em;
+    }
+}
+
+.content{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 2px 10px 10px hsl(221, 100%, 96%);
+    .leftcard{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        border-radius: 25px;
+        align-items: center;
+        text-align: center;
+        padding: 10px 40px;
+        background-image: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+        h3{
+            color: hsl(241, 100%, 89%);
+            font-weight: 100;
+        }
+        .score{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-image: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+
+            h1{
+                font-size: 3.5em;
+                margin: 0;
+                color: white;
+            }
+            p{
+                margin: 0;
+                color: hsl(241, 100%, 89%);
+            }
+        }
+        .great{
+            margin: 0;
+            font-weight: 100;
+            color: white;
+        }
+        p{
+            color: hsl(241, 100%, 89%);
+        }
+    }
+
+    .rightcard{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 10px 30px;
+        h3{
+            color: hsl(224, 30%, 27%);
+        }
+        .subjects{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .minicard{
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 10px;
+                border-radius: 10px;
+                .left{
+                    .logo{
+                        display: flex;
+                        img{
+                            padding-right: 5px;
+                            width: 20%;
+                        }
+                    }
+                }
+                .right{
+                    p{
+                        color: hsl(224, 30%, 27%);
+                        span{
+                            color: hsl(241, 100%, 89%);
+                        }
+                    }
+                }
+            }
+            .reaction{
+                background-color: hsl(0, 100%, 97%);
+                p{
+                    color: hsl(0, 100%, 67%);
+                }
+            }
+            .memory{
+                background-color: hsl(39, 100%, 97%);
+                p{
+                    color: hsl(39, 100%, 56%);
+                }
+            }
+            .verbal{
+                background-color: hsl(166, 100%, 97%);
+                p{
+                    color: hsl(166, 100%, 37%);
+                }
+            }
+            .visual{
+                background-color: hsl(234, 85%, 97%); 
+                p{
+                    color: hsl(234, 85%, 45%);
+                }
+            }
+        }
+
+        button{
+            margin: 30px 0px;
+            width: 100%;
+            border: none;
+            border-radius: 20px;
+            background-color: hsl(224, 30%, 27%);
+            height: 40px;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        button:hover{
+            background-image: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+            transition: 0.7s;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .content{
+        align-items: start;
+    }
+    
+    .card{
+        flex-direction: column;
+        max-width: 375px;
+        min-width: 300px;
+        .leftcard{
+            width: 100%;
+            padding: 0;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            .text{
+                padding: 0 70px;
+                padding-bottom: 20px;
+            }
+        }
+    
+        .rightcard{
+            margin: 0;
+            align-items: center;
+            width: 100%;
+            h3{
+                width: 80%;
+            }
+            .subjects{
+                padding: 0;
+                width: 80%;
+            }
+            button{
+                width: 80%;
+            }
+        }
+    }
+}
